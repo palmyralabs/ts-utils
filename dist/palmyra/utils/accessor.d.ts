@@ -1,4 +1,4 @@
-import { BiConsumer, BiFunction, IFunction, TriConsumer } from './functional';
+import { BiConsumer, BiFunction, IFunction, TriConsumer } from './';
 
 type InputType = string | number | Date;
 declare const getValueByKey: BiFunction<string, any, InputType>;

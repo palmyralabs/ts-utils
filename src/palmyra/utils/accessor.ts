@@ -1,5 +1,5 @@
-import { BiConsumer, BiFunction, IFunction, TriConsumer } from "./functional";
-import { hasDot } from "./StringUtil";
+import { BiConsumer, BiFunction, IFunction, TriConsumer } from "./";
+import { hasDot } from "./";
 
 type InputType = string | number | Date;
 
