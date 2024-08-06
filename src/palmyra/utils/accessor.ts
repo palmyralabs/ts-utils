@@ -38,7 +38,7 @@ const setValueByKey: TriConsumer<string, any, InputType>
     }
 
 const getValueAccessor = (key: string): IFunction<any, any> => {
-    return hasDot(key) ? (data: any) => (getValueByKey(key, data)) : (data: any) => (data[key]);
+    return hasDot(key) ? (data: any) => (getValueByKey(key, data)) : (data: any) => (data?.[key]);
 }
 
 const getValueSetter = (key: string): BiConsumer<any, any> => {
