@@ -1,5 +1,4 @@
 import { BiConsumer, BiFunction, IFunction, TriConsumer } from './';
-
 type InputType = string | number | Date;
 declare const getValueByKey: BiFunction<string, any, InputType>;
 declare const setValueByKey: TriConsumer<string, any, InputType>;

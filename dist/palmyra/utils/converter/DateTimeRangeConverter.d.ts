@@ -1,5 +1,4 @@
 import { Converter, IRange } from '../types';
-
 declare class DateTimeRangeConverter implements Converter<any, IRange<Date>> {
     pattern: string;
     constructor(pattern: string);

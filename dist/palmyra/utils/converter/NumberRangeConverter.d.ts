@@ -1,5 +1,4 @@
 import { Converter, IRange } from '../types';
-
 declare class NumberRangeConverter implements Converter<any, IRange<number>> {
     min: number;
     max: number;

@@ -1,5 +1,4 @@
 import { Converter } from '../types';
-
 declare class DateTimeConverter implements Converter<string, Date> {
     pattern: string;
     constructor(pattern: string);
