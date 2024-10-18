@@ -1,28 +1,27 @@
 import "../../chunks/pubsub.js";
-import "dayjs";
-import { hasDot as t } from "./others/StringUtil.js";
-const e = (n, r) => {
+import { hasDot as e } from "./others/StringUtil.js";
+const t = (n, r) => {
   if (!(r === void 0 || r == null)) {
-    var o = n.indexOf(".");
-    if (o < 0)
+    var s = n.indexOf(".");
+    if (s < 0)
       return r[n];
-    var u = n.substring(0, o), s = n.substring(o + 1);
-    return e(s, r[u]);
+    var o = n.substring(0, s), u = n.substring(s + 1);
+    return t(u, r[o]);
   }
-}, i = (n, r, o) => {
-  var u = n.indexOf(".");
-  if (u < 0) {
-    r[n] = o;
+}, i = (n, r, s) => {
+  var o = n.indexOf(".");
+  if (o < 0) {
+    r[n] = s;
     return;
   }
-  var s = n.substring(0, u), v = n.substring(u + 1);
-  return (r[s] === void 0 || r[s] == null) && (r[s] = {}), i(v, r[s], o);
-}, K = (n) => t(n) ? (r) => e(n, r) : (r) => r == null ? void 0 : r[n], x = (n) => t(n) ? (r, o) => i(n, r, o) : (r, o) => {
-  r[n] = o;
+  var u = n.substring(0, o), v = n.substring(o + 1);
+  return (r[u] === void 0 || r[u] == null) && (r[u] = {}), i(v, r[u], s);
+}, c = (n) => e(n) ? (r) => t(n, r) : (r) => r == null ? void 0 : r[n], K = (n) => e(n) ? (r, s) => i(n, r, s) : (r, s) => {
+  r[n] = s;
 };
 export {
-  K as getValueAccessor,
-  e as getValueByKey,
-  x as getValueSetter,
+  c as getValueAccessor,
+  t as getValueByKey,
+  K as getValueSetter,
   i as setValueByKey
 };
