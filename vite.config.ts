@@ -26,8 +26,6 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
-        'axios',
-        'dayjs'
       ],
       input: Object.fromEntries(
         glob.sync('src/**/*.{ts,tsx}').map(file => [
